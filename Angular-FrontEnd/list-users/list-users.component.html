@@ -1,0 +1,44 @@
+<div style="text-align: center;">
+    <div>
+        <h2 style="text-align: center;">Registered Users</h2>
+    </div>
+</div>
+<div class="search">
+    <label for="search">Search By Email</label><br>
+    <input type="text" name="email" [(ngModel)]="email" placeholder="Search By Email..." />&nbsp;&nbsp;&nbsp;
+    <input (click)="SearchUserByEmail()" type="submit" name="submit" value="Search">
+</div>
+<br><br>
+<table border="3" style="text-align: center;" class="table">
+
+    <thead>
+        <tr>
+
+            <th> UserID</th>
+            <th> Name</th>
+            <th> City </th>
+            <th> Contact</th>
+            <th> Date of Birth </th>
+            <th> Email </th>
+            <th colspan="2">Actions</th>
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of user">
+
+            <td> {{ user.id }} </td>
+            <td> {{ user.name }} </td>
+            <td> {{ user.city }} </td>
+            <td> {{ user.contact }} </td>
+            <td> {{ user.dob }} </td>
+            <td> {{ user.email }} </td>
+            <td>
+                <input (click)="deleteUser(user.id)" type="submit" name="delete" value="Delete">
+
+                <input (click)="UpdateUser(user.id)" type="submit" name="update" value="Update"></td>
+        </tr>
+    </tbody>
+</table>

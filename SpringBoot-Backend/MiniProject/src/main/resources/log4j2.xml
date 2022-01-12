@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%-20d{yyyy-MMM-dd HH:mm:ss}  [%t] %-10level %-40c{1.} - %msg%n" />
+        </Console>
+        
+         <File name="File" fileName="Sample.log">
+            <PatternLayout
+                pattern="%-20d{yyyy-MMM-dd HH:mm:ss}  [%t] %-10level %-40c{1.} - %msg%n" />
+        </File>
+    </Appenders>
+ 
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console" />
+           <AppenderRef ref="File" />
+        </Root>
+    </Loggers>
+</Configuration>

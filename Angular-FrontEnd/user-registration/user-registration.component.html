@@ -1,0 +1,86 @@
+<h2 style="text-align: center;">{{message}}</h2>
+<form class="sign-up" #registrationForm="ngForm" (ngSubmit)="saveUser()">
+    <h1><span class="title">Registration Form</span> </h1>
+
+    <p class="form-details">
+
+        <label for="name">Name</label>
+
+        <input type="text" id="name" [(ngModel)]="register.name" required #name="ngModel" name="name" placeholder="Name">
+    </p>
+    <h4>
+        <div [hidden]="name.valid ">
+            Name is required
+        </div>
+    </h4>
+
+
+    <br />
+
+    <p class="form-details">
+
+        <label for="city">City</label>
+
+        <input type="text" required id="city" [(ngModel)]="register.city" required #city="ngModel" name="city" placeholder="City">
+    </p>
+    <h4>
+        <div [hidden]="city.valid ">
+            City is required
+        </div>
+    </h4>
+    <br />
+    <p class="form-details">
+
+        <label for="contact">Contact</label>
+
+        <input type="text" id="contact" required [(ngModel)]="register.contact" name="contact" #contact="ngModel" placeholder="Contact" pattern="^((\\+91-?)|0)?[0-9]{10}$" />
+
+    </p>
+    <h4>
+        <div [hidden]="contact.valid ">
+            Contact No is required or Invalid
+        </div>
+    </h4>
+    <br />
+
+    <p class="form-details">
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" [(ngModel)]="register.dob" name="dob">
+
+
+    </p>
+    <br>
+    <p class="form-details">
+
+        <label for="email">Email</label>
+
+        <input type="text" id="email" [(ngModel)]="register.email" name="email" required #email="ngModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" placeholder="Email">
+    </p>
+    <h4>
+        <div [hidden]="email.valid  ">
+            Email is required or Invalid
+        </div>
+    </h4>
+
+
+    <br />
+
+
+    <p class="form-details">
+        <label for="password">Password</label>
+
+        <input type="password" id="password" required [(ngModel)]="register.password" name="password" #password="ngModel" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$" placeholder="Password">
+    </p>
+
+    <h4>
+        <div [hidden]="password.valid ">
+            Password is required <br><br>(Password should be at least 8 characters long <br>and should contain one Number,<br>one Upper case character<br>one Special character)
+        </div>
+
+    </h4>
+    <br />
+
+    <input class="button" type="submit" [disabled]="!registrationForm.form.valid">
+
+</form>

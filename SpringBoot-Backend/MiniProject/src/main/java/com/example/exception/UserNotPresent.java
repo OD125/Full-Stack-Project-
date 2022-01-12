@@ -1,0 +1,9 @@
+package com.example.exception;
+
+public class UserNotPresent extends RuntimeException {
+
+	public UserNotPresent(String message) {
+		super(message);
+	}
+
+}

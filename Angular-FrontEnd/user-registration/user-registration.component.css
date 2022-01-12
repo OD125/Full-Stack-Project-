@@ -1,0 +1,75 @@
+h4 {
+    color: crimson;
+}
+
+.sign-up {
+    width: 340px;
+    margin: 60px auto 30px;
+    padding: 15px;
+    position: relative;
+    background: #fffaf6;
+    color: #7e7975;
+    text-align: center;
+    border: 1px solid #0e0d0d;
+}
+
+.sign-up h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #bdb5aa;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #0e0d0d;
+}
+
+.sign-up h1 .title {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #6c6763;
+    padding-right: 2px;
+}
+
+.sign-up .form-details {
+    width: 80%;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 1);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sign-up label {
+    display: block;
+    padding: 0 0 5px 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.sign-up input[type=text],
+.sign-up input[type=password] {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.sign-up input[type=text]:hover,
+.sign-up input[type=date]:hover,
+.sign-up input[type=password]:hover {
+    border-color: #CCC;
+}
+
+.sign-up input[type=submit] {
+    width: 50%;
+    height: 38px;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(#fbd568, #ffb347);
+    border: 1px solid #f4ab4c;
+    color: #141414;
+}
